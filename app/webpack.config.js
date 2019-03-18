@@ -3,6 +3,7 @@ const CleanPlugin = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
+// eslint-disable-next-line no-undef
 module.exports = {
   entry: ['@babel/polyfill', './src/index.js'],
   output: {

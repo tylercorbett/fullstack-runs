@@ -1,16 +1,18 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import { getSentence } from '../services/sentence';
 
 export default class Sentence extends PureComponent {
-  static propTypes = {
-    sentence: PropTypes.string.isRequired
+  state = {
+    sentence: ''
   }
+
+
   render() {
-    const { sentence } = this.props;
+    const { sentence } = this.state;
     return (
         <>
             <p>
-              {sentence}
+              hello{sentence}
             </p>
         </>
     );
