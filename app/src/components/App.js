@@ -12,12 +12,20 @@ export default class App extends PureComponent {
         this.setState({ sentence: json.body });
       });
   }
+  handleClick = () => {
+    fetch('https://backendrunb.herokuapp.com/random')
+      .then(res => res.json())
+      .then(json => {
+        this.setState({ sentence: json.body });
+      });
+  }
   render() {
     const { sentence } = this.state;
     return (
       <>
         <h1>App</h1>
         <Sentence sentence={sentence} />
+        <button onClick={this.handleClick}>Click Me</button>
       </>
     );
   }
